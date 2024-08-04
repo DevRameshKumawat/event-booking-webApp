@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-12">
+        <table>
+            <thead>
+                <tr>
+                    <td>Sr No</td>
+                    <td>
+                        Event Name
+                    </td>
+                    <td>Start Time</td>
+                    <td>Booking No</td>
+                    <td>No of Tickets</td>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of bookingList; track $index) {
+                    <tr>
+                        <td>{{$index + 1}}</td>
+                        <td>{{item.eventName}}</td>
+                        <td>{{item.startTime}}</td>
+                        <td>{{item.BookingNo}}</td>
+                        <td>{{item.noOfTickets}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
